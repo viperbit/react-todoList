@@ -10,6 +10,7 @@
     "babel-jest": "23.6.0",
     "babel-loader": "8.0.4",
     "babel-plugin-named-asset-import": "^0.2.3",
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-react-app": "^6.1.0",
     "bfj": "6.1.1",
     "case-sensitive-paths-webpack-plugin": "2.1.2",
@@ -19,6 +20,7 @@
     "dotenv": "6.0.0",
     "dotenv-expand": "4.2.0",
     "eslint": "5.6.0",
+    "eslint-config-airbnb": "^17.1.0",
     "eslint-config-react-app": "^3.0.5",
     "eslint-loader": "2.1.1",
     "eslint-plugin-flowtype": "2.50.1",
@@ -63,7 +65,22 @@
     "test": "node scripts/test.js"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": [
+      "airbnb",
+      "prettier"
+    ],
+    "rules": {
+      "react/prefer-stateless-function": 0,
+      "react/jsx-filename-extension": 0,
+      "react/jsx-one-expression-per-line": 0,
+      "react/sort-comp": 0,
+      "no-unused-vars": "warn",
+      "no-plusplus": "warn"
+    },
+    "env": {
+      "browser": true
+    },
+    "parser": "babel-eslint"
   },
   "browserslist": [
     ">0.2%",
